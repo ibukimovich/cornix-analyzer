@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cornix-analyzer"
+version = "0.1.0"
+description = "Typing error analysis and keymap suggestion tool for Cornix LP keyboard"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: MacOS X",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: MacOS :: MacOS X",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/ibuki/cornix-analyzer"
+Repository = "https://github.com/ibuki/cornix-analyzer"
+Issues = "https://github.com/ibuki/cornix-analyzer/issues"
+
+[project.scripts]
+cornix-analyzer = "cornix_analyzer.main:main"
+
+[tool.setuptools.packages.find]
+include = ["cornix_analyzer*"]
